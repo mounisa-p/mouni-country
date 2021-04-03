@@ -1,0 +1,20 @@
+<p>countrylist works!</p>
+<div class="content">
+    <div class="card">
+      <div class="form-group">
+        <label for="search-text">Search Text</label>
+        <!-- <input type="searchText" class="form-control" id="search-text" aria-describedby="search-text" 
+        [(ngModel)] = "searchText" placeholder="Enter text to search" 
+          autofocus> -->
+      </div>
+      <ul class="list-group list-group-flush"> -->
+        <!-- results of ngFor is passed to appFilter with argument searchText -->
+        <!-- <li class="list-group-item" *ngFor="let country of countrylist.countries | filter: searchText">
+          {{country.country.country_name}}
+        </li> -->
+      </ul>
+    </div>
+  </div>
+<div *ngFor="let country of countrylist.countries">
+    <li (click)="onclicklisting()">{{ country.country.country_name }}</li>
+</div>
